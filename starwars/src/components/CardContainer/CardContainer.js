@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
 import {
-    Card, CardText, CardBody,
-    CardTitle, CardSubtitle, Col
+    Card, CardBody, CardSubtitle, Col, CardHeader
 } from 'reactstrap';
+
 import '../StarWars.css';
 
 
@@ -33,13 +33,13 @@ const CardContainer = (props) => {
 
     return (
         <Col>
-            <Card>
+            <Card className="starwars-card">
+                <CardHeader className="title"><h2>{props.name}</h2></CardHeader>
                 <CardBody>
-                    <CardTitle>{props.name}</CardTitle>
-                    <CardSubtitle>{homeworld}</CardSubtitle>
-                    <CardSubtitle>{props.birthyear}</CardSubtitle>
-                    <CardSubtitle>{species}</CardSubtitle>
-                    <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                    <CardSubtitle>Home World: {homeworld}</CardSubtitle>
+                    <CardSubtitle>Species: {species}</CardSubtitle>    
+                    <br/>
+                    <CardSubtitle>Birth Year: {props.birthyear}</CardSubtitle>
                 </CardBody>
             </Card>
         </Col>

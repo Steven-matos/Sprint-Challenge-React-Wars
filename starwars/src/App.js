@@ -11,7 +11,6 @@ const App = () => {
   useEffect(() => {
     axios.get("https://swapi.co/api/people/")
       .then(res => {
-        console.log(res.data)
         setCharacter(res.data.results)
       })
       .catch(err => {
@@ -23,9 +22,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <h1 className="Header">React Wars</h1>
+      <h1 className="Header">Star Wars Characters</h1>
       <Container className="themed-container" fluid="sm">
-        <Row xs="4">
+        <Row xs="3">
           {character.map(data => {
             return(
               <CardContainer 
