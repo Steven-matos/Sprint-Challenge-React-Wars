@@ -17,10 +17,23 @@ const App = () => {
       })
   }, [])
 
+  console.log(character)
+
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      <CardContainer />
+      {character.map(data => {
+        return(
+          <CardContainer 
+            key={data.url}
+            name={data.name}
+            birthyear={data.birth_year}
+            homeworld={data.homeworld}
+            species={data.species}
+        />
+        );
+      })}
+      
     </div>
   );
 }
