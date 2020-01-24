@@ -33,6 +33,7 @@ const App = () => {
                 birthyear={data.birth_year}
                 homeworld={data.homeworld}
                 species={data.species}
+                mass={data.mass}
             />
             );
           })}

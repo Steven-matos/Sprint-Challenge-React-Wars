@@ -40,6 +40,7 @@ const CardContainer = (props) => {
                     <CardSubtitle>Species: {species}</CardSubtitle>    
                     <br/>
                     <CardSubtitle>Birth Year: {props.birthyear}</CardSubtitle>
+                    <CardSubtitle>Weight: {props.mass} kg's</CardSubtitle>
                 </CardBody>
             </Card>
         </Col>
